@@ -1,0 +1,41 @@
+=== Описание
+
+Демонстрация использования {Neography}[https://github.com/maxdemarzi/neography] а также {processing.js}[http://processingjs.org/] пакета Neo4j graph и использования {REST API}[http://components.neo4j.org/neo4j-server/milestone/rest.html]
+
+=== Как устанавливать
+
+Следуйте шагам {Getting started with Ruby and Neo4j}[http://maxdemarzi.com/2012/01/04/getting-started-with-ruby-and-neo4j/]
+установите пакет Neo4j, запустите,  и заполните узлами и отношениями.
+
+  git clone git@github.com:kapranov/pyramid.git
+  cd pyramid
+  bundle
+  rake neo4j:install
+  rake neo4j:start
+  rackup
+
+Затем в браузере введите сылку http://localhost:9292 При открытии страницы будет запущен простейший график.
+
+Ведите № узла в текстовом поле и нажмите "загрузить"
+
+=== Установка на Heroku с использованием кнопки Heroku
+
+This button will walk you through the deployment just with a few clicks. It will add the free plan of the {GrapheneDB Neo4j add-on}[https://addons.heroku.com/graphenedb].
+
+{<img src="https://www.herokucdn.com/deploy/button.png">}[https://heroku.com/deploy]
+
+Выполнено!
+
+=== Установка Heroku
+
+1. Check out a copy of the repo
+2. Create a new Heroku app: `$ heroku create`
+3. Add the {GrapheneDB Neo4j add-on}[https://addons.heroku.com/graphenedb]: `$ heroku addons:add graphenedb`
+4. Deploy the code: `$ git push heroku`
+
+=== Credits
+
+=== Links
+
+* {Neo4j Community}[http://neo4j.org]
+* {Max De Marzi}[http://maxdemarzi.com]

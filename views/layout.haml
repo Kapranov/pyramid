@@ -1,0 +1,45 @@
+!!!
+%html
+  %head
+    %link(rel="stylesheet" href="/css/global.css")
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"}
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"}
+    %script{:src => "/js/ui.js"}
+    %script{:src => "/js/processing.min.js"}
+
+    %title Пирамида
+
+  %body
+    %canvas#neoviz
+    %header
+      %section#title
+        %h1 Пирамида
+        %p Отношения с соседями
+      %section#search
+        %form{:action => "/", :method => "get"}
+          %label Узел № ID:
+          %input#neoid{:type => "text", :value => "#{@neoid}", :name => "neoid"}
+          %input#loadnode{:type => "submit", :value => "Загрузить", :class => "button"}
+      %br{:style => "clear: both;"}
+    %section#content
+      = yield
+    %rside
+      %div#explanation
+        / Introduction
+        %h2 О нас
+        %p
+          Пирамида это попытка визуализировать что либо через отношения.
+          Используеться Sinatra Ruby Neo4j Neography, app.graphenedb REST API.
+          Как пользоваться пирамидой - Это ДЕМО версия для ознакомления.
+
+        %h3 Примечание
+        %p
+          Код выложу на
+          %a{:href => "https://github.com/kapranov/pyramid", :target => "_blank"} Github
+
+      <div id="browser_not_supported">
+      Your Browser is currently not supported.<br/><br/>Try one of these:<br/>
+      <a href="http://www.mozilla.com/en-US/firefox/firefox.html">Firefox 3.6</a><br/>
+      <a href="http://www.apple.com/safari/">Safari 4.0</a><br/>
+      <a href="http://www.google.com/chrome/">Chrome</a><br/>
+      </div>
